@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* outline: 1px rgba(255, 0, 0, 0.527) dashed; */
+    outline: 1px rgba(255, 0, 0, 0.527) dashed;
 }
 
 :root {
@@ -48,22 +48,41 @@ img {
 }
 
 .btn {
-    background-color: var(--indigo);
-    outline: 3px var(--pink) solid;
     border: 0;
     padding: 1rem;
     font-size: 1.25rem;
     border-radius: var(--border-radius);
-    color: var(--white);
     font-weight: 600;
     text-transform: uppercase;
+    width: 10rem;
+    cursor: pointer;
 }
 
 .btn:hover {
+    transition: background-color .3s ease
+}
+
+#hero .btn {
+    background-color: var(--indigo);
+    outline: 3px var(--pink) solid;
+    color: var(--white);
+}
+
+#hero .btn:hover {
     background-color: var(--pink);
     color: var(--indigo);
     outline-color: var(--pink);
-    transition: background-color .3s ease
+}
+
+#servicios .btn {
+    outline: 2px var(--white) solid;
+    background-color: var(--alpha0);
+    color: var(--white);
+}
+#servicios .btn:hover {
+    outline: 2px var(--white) solid;
+    background-color: var(--white);
+    color: var(--mint-dark);
 }
 
 /* === ESTRUCTURA GLOBAL (LAYOUT) === */
@@ -83,6 +102,12 @@ header {
     padding: 16px;
     background-color: var(--indigo);
     gap: 8px;
+}
+
+section {
+    padding: var(--gap) calc(var(--gap)*2);
+    display: flex;
+    flex-direction: column;
 }
 
 .header-nav__list {
@@ -141,7 +166,6 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: var(--gap) calc(var(--gap)*4);
     gap: var(--gap);
     color: var(--white);
 }
@@ -151,9 +175,34 @@ main {
     outline: 4px var(--white) dashed;
 }
 
+#servicios {
+    gap: var(--gap);
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.card {
+    background-color: var(--indigo);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    outline: 4px var(--pink) dashed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--gap);
+    color: var(--white);
+}
+
 footer {
     height: 128px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
