@@ -79,10 +79,11 @@ img {
     background-color: var(--alpha0);
     color: var(--white);
 }
+
 #servicios .btn:hover {
-    outline: 2px var(--white) solid;
-    background-color: var(--white);
-    color: var(--mint-dark);
+    outline: 2px var(--mint) solid;
+    background-color: var(--mint);
+    color: var(--indigo);
 }
 
 /* === ESTRUCTURA GLOBAL (LAYOUT) === */
@@ -197,6 +198,27 @@ main {
     text-align: center;
     gap: var(--gap);
     color: var(--white);
+}
+
+#proyectos {
+    text-align: center;
+    gap: var(--gap);
+}
+
+#proyectos figure {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    justify-content: center;
+}
+
+#proyectos img {
+    border-radius: var(--border-radius);
+}
+
+#proyectos figcaption {
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 footer {
