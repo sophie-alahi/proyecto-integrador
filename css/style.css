@@ -1,0 +1,18 @@
+/* === RESET Y VARIABLES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --indigo: #461959;
+    --purple: #7A316F;
+    --pink: #CD6688;
+    --mint: #AED8CC;
+    --black: #0a030e;
+    --white: #ffffff;
+
+    --border-radius: 20px;
+    --gap: 1rem;
+}
