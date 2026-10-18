@@ -24,6 +24,9 @@
 }
 
 /* === UTILIDADES === */
+.required-styles {
+    color: rgb(255, 103, 103);
+}
 
 
 /* === COMPONENTES === */
@@ -92,7 +95,7 @@ body {
     font-family: "Montserrat", sans-serif;
     background-color: var(--indigo);
     color: var(--white);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 header {
@@ -109,6 +112,11 @@ section {
     padding: var(--gap) calc(var(--gap)*2);
     display: flex;
     flex-direction: column;
+    width: 100vw;
+}
+
+h2, h3 {
+    width: 100%;
 }
 
 .header-nav__list {
@@ -200,6 +208,10 @@ main {
     color: var(--white);
 }
 
+.card h3 {
+    font-size: .75em;
+}
+
 #proyectos {
     text-align: center;
     gap: var(--gap);
@@ -221,8 +233,125 @@ main {
     font-weight: 600;
 }
 
+#contacto {
+    gap: var(--gap);
+}
+
+#contacto ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: var(--gap);
+    flex-wrap: wrap;
+}
+
+#contacto ul li {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    width: fit-content;
+    padding: .5rem 2rem;
+    border-radius: 25px;
+}
+
+
+#contacto ul li:nth-child(1) {
+    background-image: url(../assets/img/github-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#contacto ul li:nth-child(2) {
+    background-image: url(../assets/img/linkedin-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#contacto ul li a {
+    display: flex;
+    justify-content: center;
+    margin-left: var(--gap);
+    text-decoration: none;
+    color: var(--indigo);
+    font-weight: 600;
+}
+#contacto ul li a:hover {
+    color: var(--mint-dark);
+}
+
+form {
+    background-color: var(--indigo);
+    padding: var(--gap);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+}
+
+form fieldset {
+    width: 100%;
+    padding: calc(var(--gap)/4) calc(var(--gap)/2);
+    border-radius: calc(var(--border-radius)/2);
+    padding: calc(var(--gap)/2);
+    padding-bottom: var(--gap) ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+form fieldset legend {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 .5rem;
+}
+
+form label {
+    font-size: 1rem;
+}
+
+form input, form textarea, form select {
+    gap: var(--gap);
+    border-radius: calc(var(--border-radius)/4);
+    border-color: var(--mint);
+    padding: calc(var(--gap)/4);
+    color: var(--indigo);
+}
+
+input::placeholder {
+    color: var(--indigo);
+}
+
+form textarea {
+    width: 100%;
+    height: 100px;
+    padding: .5rem;
+    resize: vertical;
+}
+
+form .btn {
+    transform: scale(.75);
+}
+
+form .form__btns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form .btn {
+    outline: 2px var(--mint) solid;
+    color: var(--indigo);
+}
+form .btn:hover {
+    outline-color: 2px var(--mint) solid;
+    color: var(--white);
+    background-color: var(--indigo);
+}
+
+
 footer {
     height: 128px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
