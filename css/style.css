@@ -57,6 +57,7 @@ img {
 .btn {
     border: 0;
     padding: 1rem;
+    text-decoration: none;
     font-size: 1.25rem;
     border-radius: var(--border-radius);
     font-weight: 600;
@@ -91,6 +92,9 @@ img {
     outline: 2px var(--mint) solid;
     background-color: var(--mint);
     color: var(--indigo);
+}
+.separator {
+    align-self: center;
 }
 
 /* === ESTRUCTURA GLOBAL (LAYOUT) === */
@@ -201,6 +205,7 @@ h3 {
 #hero img {
     border-radius: 25% 25% 50% 50%;
     outline: 4px var(--white) dashed;
+    max-width: 500px;
 }
 
 #servicios {
@@ -584,7 +589,7 @@ footer small {
         flex-direction: row;
         gap: 32px;
         justify-content: space-between;
-        padding: 32px 64px;
+        padding: 32px 128px;
         height: 48px;
     }
 
@@ -606,6 +611,10 @@ footer small {
 
     .separator {
         border-width: 1px;
+    }
+
+    .main-header {
+        padding: 32px 160px;
     }
 
     
