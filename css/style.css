@@ -105,8 +105,10 @@ body {
     align-items: center;
 }
 
-header {
+
+.main-header {
     height: fit-content;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,8 +172,7 @@ h3 {
 }
 
 
-main {
-    background: var(--pink);
+.page-content {
     background: linear-gradient(180deg, var(--indigo) 0%, var(--pink) 100%);
     display: flex;
     flex-direction: column;
@@ -578,7 +579,20 @@ footer small {
     }
 }
 
+@media (min-width: 1024px) {
+    .main-header {
+        flex-direction: row;
+        gap: 32px;
+        justify-content: space-between;
+        padding: 32px 64px;
+    }
+}
+
 @media (min-width: 1440px) {
+
+    .separator {
+        border-width: 1px;
+    }
 
     .page-content {
         padding: var(--gap) calc(var(--gap)*5);
