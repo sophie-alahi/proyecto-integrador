@@ -100,6 +100,9 @@ body {
     background-color: var(--indigo);
     color: var(--white);
     font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -174,6 +177,7 @@ main {
     align-items: center;
     justify-content: center;
     height: 100%;
+    gap: var(--gap);
 }
 
 #hero {
@@ -183,6 +187,13 @@ main {
     text-align: center;
     gap: var(--gap);
     color: var(--white);
+}
+
+#hero>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
 }
 
 #hero img {
@@ -246,6 +257,8 @@ main {
 
 #contacto {
     gap: var(--gap);
+    align-items: center;
+    text-align: center;
 }
 
 #contacto ul {
@@ -298,6 +311,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: var(--gap);
 }
 
@@ -341,7 +355,26 @@ form textarea {
     width: 100%;
     height: 100px;
     padding: .5rem;
-    resize: vertical;
+    resize: none;
+}
+
+form .newsletter {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#newsletter {
+    width: 20px;
+    height: 20px;
+    justify-self: end;
+}
+
+form .newsletter-label {
+    width: fit-content;
+    font-size: .75rem;
 }
 
 form .btn {
@@ -351,6 +384,8 @@ form .btn {
 form .form__btns {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 form .btn {
@@ -365,7 +400,7 @@ form .btn:hover {
 }
 
 
-footer {
+#main-footer {
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -374,7 +409,7 @@ footer {
     align-items: center;
 }
 
-footer>div {
+#main-footer>div {
     padding: var(--gap);
     display: flex;
     flex-direction: column;
@@ -409,14 +444,19 @@ footer small {
     background-color: var(--white);
     font-weight: 600;
     color: var(--indigo);
-    width: 100%;
+    width: 100vw;
     padding: calc(var(--gap)/4);
 }
 
 @media (min-width: 375px) {
+
     .card h3,
     .card p {
         transform: scale(1.1);
+    }
+
+    form .newsletter {
+        flex-direction: row;
     }
 }
 
@@ -429,13 +469,97 @@ footer small {
         width: 50%;
         border-radius: 25% 50% 50% 25%;
     }
+
     .cards {
         flex-direction: row;
-        flex-wrap: wrap;   
+        flex-wrap: wrap;
         justify-content: center;
     }
+
     .card {
         width: 45%;
+        justify-content: center;
+    }
+
+    .card h3,
+    .card p {
+        transform: scale(1.1);
+    }
+
+    #proyectos {
+        align-items: center;
+    }
+
+    #proyectos figure {
+        align-items: center;
+    }
+
+    #proyectos figure img {
+        width: 45%;
+    }
+
+    #proyectos figure figcaption {
+        display: block;
+        height: fit-content;
+        width: 100%;
+        text-align: center;
+    }
+
+    #proyectos .separator {
+        width: 25%;
+    }
+
+    #contacto ul li {
+        outline: 2px var(--white) solid;
+    }
+
+    .contact-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #contacto .datos-personales {
+        order: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .datos-personales input {
+        width: 75%;
+    }
+
+    #contacto .motivo-contacto {
+        order: 1;
+        width: 45%;
+    }
+
+    #contacto .mensaje {
+        width: 100%;
+        order: 3;
+    }
+
+    #contacto .newsletter {
+        order: 2;
+        width: 45%;
+        height: 90px;
+    }
+
+    form .motivo-contacto {
+        height: 90px;
+    }
+
+    #contacto .form__btns {
+        order: 4;
+        width: 50%;
+        flex-direction: row;
+    }
+
+    #main-footer>div {
+        flex-direction: row;
+        gap: var(--gap);
     }
 }
 
+@media (min-width: 1440px) {
+
+}

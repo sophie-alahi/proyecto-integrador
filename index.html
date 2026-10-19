@@ -50,19 +50,19 @@
                 </article>
                 <article class="card javascript__card">
                     <img src="https://picsum/400/400" alt="">
-                    <h3>JavaScript y galerías</h3>
+                    <h3>JavaScript <br> y galerías</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, incidunt.</p>
                     <button class="btn">Contratar</button>
                 </article>
                 <article class="card mantenimiento-web__card">
                     <img src="https://picsum/400/400" alt="">
-                    <h3>Mantenimiento web</h3>
+                    <h3>Mantenimiento <br> web</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, incidunt.</p>
                     <button class="btn">Contratar</button>
                 </article>
                 <article class="card combo-premium__card">
                     <img src="https://picsum/400/400" alt="">
-                    <h3>Combo premium</h3>
+                    <h3>Combo <br> premium</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, incidunt.</p>
                     <button class="btn">Contratar</button>
                 </article>
@@ -72,6 +72,7 @@
             <h2>Mis proyectos</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab accusantium repellat asperiores, eius placeat
                 perspiciatis! Voluptas eaque dolores aperiam optio possimus tempore quisquam quam quasi?</p>
+                <hr class="separator horizontal-separator"></hr>
             <figure>
                 <figcaption>Celular</figcaption>
                 <img src="https://picsum.photos/400/400" alt="">
@@ -92,15 +93,15 @@
                 <li><a href="#">LinkedIn</a></li>
             </ul>
             <h3>...o contactame directamente</h3>
-            <form>
-                <fieldset>
+            <form class="contact-form">
+                <fieldset class="datos-personales">
                     <legend>Datos personales<span class="required-styles">*</span></legend>
                     <input type="text" name="nombre-completo" id="nombre-completo" placeholder="Nombre completo"
                         required>
                     <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
                     <input type="number" name="phone-number" id="cel-number" placeholder="11 2233-4455" required>
                 </fieldset>
-                <fieldset>
+                <fieldset class="motivo-contacto">
                     <legend>Motivo de contacto</legend>
                     <select name="" id="drop-down">
                         <option value="seleccionar">Seleccionar</option>
@@ -109,15 +110,15 @@
                         <option value="problema">Problema</option>
                     </select>
                 </fieldset>
-                <fieldset>
+                <fieldset class="mensaje">
                     <legend>Tu mensaje<span class="required-styles">*</span></legend>
                     <textarea name="email-menssage" id="email-message"
-                        required>¡Hola Sophie! Te contacto porque...</textarea>
+                        required>¡Hola, Sophie! Te contacto porque...</textarea>
                 </fieldset>
-                <fieldset>
+                <fieldset class="newsletter">
                     <legend>Newsletter</legend>
-                    <input type="radio" name="" id="newsletter">
-                    <label for="">Quiero unirme al newsletter</label>
+                    <input type="checkbox" name="" id="newsletter">
+                    <label class="newsletter-label" for="newsletter">Quiero unirme al newsletter</label>
                 </fieldset>
                 <div class="form__btns">
                     <button class="btn" type="submit">Enviar</button>
@@ -126,7 +127,7 @@
             </form>
         </section>
     </main>
-    <footer class="main-footer">
+    <footer id="main-footer">
         <div>
             <div class="logo">
                 <img src="./assets/img/favicon-daisy/android-chrome-192x192.png" alt="Sophie Alahí">
