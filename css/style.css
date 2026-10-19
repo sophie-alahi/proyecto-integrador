@@ -587,6 +587,19 @@ footer small {
         padding: 32px 64px;
         height: 48px;
     }
+
+    body>.separator {
+        margin: 0;
+    }
+
+    .page-content {
+        padding: var(--gap) calc(var(--gap)*5);
+        padding-top: 0;
+    }
+
+    #hero {
+        min-height: calc(100vh - 48px);
+    }
 }
 
 @media (min-width: 1440px) {
@@ -595,13 +608,13 @@ footer small {
         border-width: 1px;
     }
 
-    .page-content {
-        padding: var(--gap) calc(var(--gap)*5);
-    }
+    
+
     #hero {
         gap: calc(var(--gap)*4);
         justify-content: center;
     }
+
     #hero>div {
         text-align: end;
         align-items: end;
@@ -613,6 +626,7 @@ footer small {
     }
 
     #servicios .card {
+        justify-content: end;
         width: 20%;
     }
 
