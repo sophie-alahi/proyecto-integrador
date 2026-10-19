@@ -28,6 +28,10 @@
     color: rgb(255, 103, 103);
 }
 
+.copyright-symbol {
+    vertical-align: super;
+}
+
 
 /* === COMPONENTES === */
 .logo {
@@ -104,6 +108,7 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 16px;
+
     background-color: var(--indigo);
     gap: 8px;
 }
@@ -115,7 +120,8 @@ section {
     width: 100vw;
 }
 
-h2, h3 {
+h2,
+h3 {
     width: 100%;
 }
 
@@ -212,6 +218,10 @@ main {
     font-size: .75em;
 }
 
+.card p {
+    font-size: .75rem;
+}
+
 #proyectos {
     text-align: center;
     gap: var(--gap);
@@ -226,6 +236,7 @@ main {
 
 #proyectos img {
     border-radius: var(--border-radius);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 #proyectos figcaption {
@@ -275,6 +286,7 @@ main {
     color: var(--indigo);
     font-weight: 600;
 }
+
 #contacto ul li a:hover {
     color: var(--mint-dark);
 }
@@ -294,7 +306,7 @@ form fieldset {
     padding: calc(var(--gap)/4) calc(var(--gap)/2);
     border-radius: calc(var(--border-radius)/2);
     padding: calc(var(--gap)/2);
-    padding-bottom: var(--gap) ;
+    padding-bottom: var(--gap);
     display: flex;
     flex-wrap: wrap;
     gap: var(--gap);
@@ -310,7 +322,10 @@ form label {
     font-size: 1rem;
 }
 
-form input, form textarea, form select {
+form input,
+form textarea,
+form select {
+    width: 100%;
     gap: var(--gap);
     border-radius: calc(var(--border-radius)/4);
     border-color: var(--mint);
@@ -342,6 +357,7 @@ form .btn {
     outline: 2px var(--mint) solid;
     color: var(--indigo);
 }
+
 form .btn:hover {
     outline-color: 2px var(--mint) solid;
     color: var(--white);
@@ -350,10 +366,76 @@ form .btn:hover {
 
 
 footer {
-    height: 128px;
-    width: 100%;
+    height: fit-content;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
+
+footer>div {
+    padding: var(--gap);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap)/2);
+}
+
+.links-utiles h2 {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.links-utiles ul {
+    list-style: url(../assets/img/favicon-daisy/favicon-16x16.png);
+    padding-left: calc(var(--gap)*1.25);
+}
+
+.links-utiles a {
+    font-size: 1rem;
+    color: var(--white);
+    text-decoration: none;
+    align-self: center;
+}
+
+.links-utiles a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+footer small {
+    text-align: center;
+    font-size: 12px;
+    background-color: var(--white);
+    font-weight: 600;
+    color: var(--indigo);
+    width: 100%;
+    padding: calc(var(--gap)/4);
+}
+
+@media (min-width: 375px) {
+    .card h3,
+    .card p {
+        transform: scale(1.1);
+    }
+}
+
+@media (min-width: 768px) {
+    #hero {
+        flex-direction: row;
+    }
+
+    #hero img {
+        width: 50%;
+        border-radius: 25% 50% 50% 25%;
+    }
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;   
+        justify-content: center;
+    }
+    .card {
+        width: 45%;
+    }
+}
+
