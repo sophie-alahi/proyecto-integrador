@@ -216,7 +216,7 @@ h3 {
     justify-self: center;
     width: 50%;
     background-color: var(--pink);
-    border: 2px var(--pink) solid;
+    border: 1px var(--pink) solid;
     border-radius: 20px;
     margin: var(--gap) 0;
 }
