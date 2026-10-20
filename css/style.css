@@ -103,25 +103,25 @@ img {
 }
 
 .go-top {
-    display: flex;
-    /* position: fixed; */
-    justify-content: flex-end;
-    width: 100%;
+    float: right;
+    position: fixed;
+    bottom: var(--gap);
+    right: var(--gap);
+    align-self: flex-end;
 }
 
 .go-top__btn {
     display: block;
-    align-self: flex-end;
     text-decoration: none;
     background: url(../assets/img/flecha.png), var(--mint-dark);
-    background-size: 48px;
+    background-size: 32px;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: .3;
+    opacity: .5;
     border-radius: 100%;
     outline: 2px var(--mint-dark) solid;
-    width: 64px;
-    height: 64px;
+    width: 40px;
+    height: 40px;
 }
 
 .go-top__btn:hover {
@@ -476,6 +476,7 @@ form .btn:hover {
     flex-direction: column;
     gap: calc(var(--gap)/2);
 }
+
 #main-footer div>ul {
     list-style: none;
     display: flex;
@@ -558,6 +559,13 @@ footer small {
 }
 
 @media (min-width: 768px) {
+
+    .go-top {
+        transform: scale(1.2);
+        bottom: calc(var(--gap)*2);
+        right: calc(var(--gap)*2);
+    }
+
     #hero {
         flex-direction: row;
     }
@@ -678,6 +686,12 @@ footer small {
         --font-size: var(--body-copy-large);
     } */
 
+    .go-top {
+        transform: scale(1.5);
+        bottom: calc(var(--gap)*3);
+        right: calc(var(--gap)*3);
+    }
+
     .main-header {
         flex-direction: row;
         gap: 32px;
@@ -717,6 +731,10 @@ footer small {
 }
 
 @media (min-width: 1440px) {
+
+    .go-top {
+        transform: scale(1.6);
+    }
 
     .separator {
         border-width: 1px;
