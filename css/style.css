@@ -21,6 +21,11 @@
 
     --border-radius: 20px;
     --gap: 1.5rem;
+
+    --body-copy-default: 1rem;
+    --body-copy-large: calc(var(--body-copy-default)*1.5); 
+    --font-size: var(--body-copy-default);
+
 }
 
 /* === UTILIDADES === */
@@ -56,13 +61,12 @@ img {
 
 .btn {
     border: 0;
-    padding: 1rem;
+    padding: calc(var(--gap)/3) calc(var(--gap)*0.5);
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: var(--font-size);
     border-radius: var(--border-radius);
     font-weight: 600;
     text-transform: uppercase;
-    width: 10rem;
     cursor: pointer;
 }
 
@@ -93,8 +97,37 @@ img {
     background-color: var(--mint);
     color: var(--indigo);
 }
+
 .separator {
     align-self: center;
+}
+
+.go-top {
+    display: flex;
+    /* position: fixed; */
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.go-top__btn {
+    display: block;
+    align-self: flex-end;
+    text-decoration: none;
+    background: url(../assets/img/flecha.png), var(--mint-dark);
+    background-size: 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .3;
+    border-radius: 100%;
+    outline: 2px var(--mint-dark) solid;
+    width: 64px;
+    height: 64px;
+}
+
+.go-top__btn:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: all .1s ease;
 }
 
 /* === ESTRUCTURA GLOBAL (LAYOUT) === */
@@ -103,7 +136,7 @@ body {
     font-family: "Montserrat", sans-serif;
     background-color: var(--indigo);
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: var(--font-size);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,9 +163,22 @@ section {
     width: 100%;
 }
 
+h1,
 h2,
 h3 {
     width: 100%;
+}
+
+h1 {
+    font-size: calc(var(--font-size)*2);
+}
+
+h2 {
+    font-size: calc(var(--font-size)*1.5);
+}
+
+h3 {
+    font-size: calc(var(--font-size)*1.25);
 }
 
 .header-nav__list {
@@ -205,7 +251,7 @@ h3 {
 #hero img {
     border-radius: 25% 25% 50% 50%;
     outline: 4px var(--white) dashed;
-    max-width: 500px;
+    max-width: 400px;
 }
 
 #servicios {
@@ -232,12 +278,13 @@ h3 {
     color: var(--white);
 }
 
-.card h3 {
-    font-size: .75em;
-}
+/* .card h3 {
+    font-size: var(--font-size);
+    font-weight: 700;
+} */
 
 .card p {
-    font-size: .75rem;
+    font-size: calc(var(--font-size) * 0.75);
 }
 
 #proyectos {
@@ -264,7 +311,7 @@ h3 {
 }
 
 #proyectos figcaption {
-    font-size: 2rem;
+    font-size: var(--font-size);
     font-weight: 600;
 }
 
@@ -340,13 +387,13 @@ form fieldset {
 }
 
 form fieldset legend {
-    font-size: 1rem;
+    font-size: calc(var(--font-size)*0.75);
     font-weight: 500;
     padding: 0 .5rem;
 }
 
 form label {
-    font-size: 1rem;
+    font-size: var(--font-size);
 }
 
 form input,
@@ -387,27 +434,29 @@ form .newsletter {
 
 form .newsletter-label {
     width: fit-content;
-    font-size: .75rem;
+    font-size: calc(var(--font-size)*0.75);
 }
 
-form .btn {
+/* form .btn {
     transform: scale(.75);
-}
+} */
 
 form .form__btns {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: var(--gap);
 }
 
 form .btn {
-    outline: 2px var(--mint) solid;
+    outline: 2px var(--white) solid;
     color: var(--indigo);
+    font-weight: 600;
 }
 
 form .btn:hover {
-    outline-color: 2px var(--mint) solid;
+    outline-color: 2px var(--white) solid;
     color: var(--white);
     background-color: var(--indigo);
 }
@@ -430,7 +479,7 @@ form .btn:hover {
 }
 
 .links-utiles h2 {
-    font-size: 1.25rem;
+    font-size: var(--font-size);
     text-align: center;
 }
 
@@ -440,7 +489,7 @@ form .btn:hover {
 }
 
 .links-utiles a {
-    font-size: 1rem;
+    font-size: var(--font-size);
     color: var(--white);
     text-decoration: none;
     align-self: center;
@@ -453,7 +502,7 @@ form .btn:hover {
 
 footer small {
     text-align: center;
-    font-size: 12px;
+    font-size: calc(var(--font-size)/2);
     background-color: var(--white);
     font-weight: 600;
     color: var(--indigo);
@@ -585,6 +634,11 @@ footer small {
 }
 
 @media (min-width: 1024px) {
+
+    /* :root {
+        --font-size: var(--body-copy-large);
+    } */
+
     .main-header {
         flex-direction: row;
         gap: 32px;
@@ -604,6 +658,22 @@ footer small {
 
     #hero {
         min-height: calc(100vh - 48px);
+        gap: calc(var(--gap)*4);
+    }
+
+    #hero>div {
+        text-align: end;
+        align-items: end;
+        width: 30%;
+    }
+
+    .card {
+        justify-content: end;
+        width: 45%;
+    }
+
+    #contacto .btn {
+        font-size: calc(var(--font-size)*1.5);
     }
 }
 
@@ -617,7 +687,7 @@ footer small {
         padding: 32px 160px;
     }
 
-    
+
 
     #hero {
         gap: calc(var(--gap)*4);
@@ -664,5 +734,9 @@ footer small {
     #proyectos figure>div:nth-child(2) figcaption {
         order: 1;
         transform: rotate(90deg);
+    }
+
+    #contacto form {
+        width: 80%;
     }
 }
