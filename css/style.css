@@ -37,6 +37,94 @@
     vertical-align: super;
 }
 
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: scale(.4);
+        transition: all 1s ease-in;
+    }
+
+    80% {
+        opacity: .25;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        transition: all 1s ease-in;
+    }
+}
+
+@keyframes fade-in-top {
+    0% {
+        opacity: 0;
+        transform: translateY(calc((var(--gap)/-2)));
+        transition: all 1s ease-in;
+    }
+
+    80% {
+        opacity: .25;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 1s ease-in;
+    }
+}
+
+@keyframes fade-in-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(calc(var(--gap)/2));
+        transition: all 1s ease-in;
+    }
+
+    80% {
+        opacity: .25;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 1s ease-in;
+    }
+}
+@keyframes fade-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(calc(var(--gap)/2));
+        transition: all 1s ease-in;
+    }
+
+    80% {
+        opacity: .25;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 1s ease-in;
+    }
+}
+@keyframes fade-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(calc(var(--gap)/-2));
+        transition: all 1s ease-in;
+    }
+
+    80% {
+        opacity: .25;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 1s ease-in;
+    }
+}
+
 
 /* === COMPONENTES === */
 .logo {
@@ -246,12 +334,16 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: var(--gap);
+    animation: fade-in-bottom .3s linear;
+
 }
 
 #hero img {
     border-radius: 25% 25% 50% 50%;
     outline: 4px var(--white) dashed;
     max-width: 400px;
+    animation: fade-in-top .3s linear;
+
 }
 
 #servicios {
@@ -570,9 +662,14 @@ footer small {
         flex-direction: row;
     }
 
+    #hero>div {
+         animation: fade-in-left .3s linear;
+    }
+
     #hero img {
         width: 50%;
         border-radius: 25% 50% 50% 25%;
+         animation: fade-in-right .3s linear;
     }
 
     .cards {
