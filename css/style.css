@@ -708,7 +708,8 @@ footer small {
     }
 
     #proyectos figure img {
-        width: 45%;
+        width: 30%;
+        background-color: var(--mint);
     }
 
     #proyectos figure figcaption {
@@ -882,7 +883,7 @@ footer small {
     }
 
     #proyectos figure img {
-        width: 30%;
+        width: 25%;
     }
 
     #proyectos figure>div:nth-child(2) figcaption {
