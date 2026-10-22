@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px rgba(255, 0, 0, 0.527) dashed;
+    /* outline: 1px rgba(255, 0, 0, 0.527) dashed; */
 }
 
 :root {
@@ -90,6 +90,7 @@
         transition: all 1s ease-in;
     }
 }
+
 @keyframes fade-in-left {
     0% {
         opacity: 0;
@@ -107,6 +108,7 @@
         transition: all 1s ease-in;
     }
 }
+
 @keyframes fade-in-right {
     0% {
         opacity: 0;
@@ -400,6 +402,8 @@ h3 {
 #proyectos img {
     border-radius: var(--border-radius);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+
+    background-color: var(--mint);
 }
 
 #proyectos figcaption {
@@ -663,13 +667,13 @@ footer small {
     }
 
     #hero>div {
-         animation: fade-in-left .3s linear;
+        animation: fade-in-left .3s linear;
     }
 
     #hero img {
         width: 50%;
         border-radius: 25% 50% 50% 25%;
-         animation: fade-in-right .3s linear;
+        animation: fade-in-right .3s linear;
     }
 
     .cards {
@@ -709,7 +713,6 @@ footer small {
 
     #proyectos figure img {
         width: 30%;
-        background-color: var(--mint);
     }
 
     #proyectos figure figcaption {
