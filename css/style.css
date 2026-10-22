@@ -669,6 +669,8 @@ footer small {
 
     #hero>div {
         animation: fade-in-left .3s linear;
+        text-align: end;
+        align-items: end;
     }
 
     #hero img {
